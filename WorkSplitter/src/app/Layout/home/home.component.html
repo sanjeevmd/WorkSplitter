@@ -1,0 +1,21 @@
+<div fxLayoutAlign = "center">
+    <button mat-stroked-button> Create New Group</button>
+</div>
+<br>
+<div fxLayoutAlign = "center">
+<table fxFlex="45" 
+mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container  matColumnDef="name">
+      <th style="background-color: slateblue;color: white;"  mat-header-cell *matHeaderCellDef> 
+          <div fxLayoutAlign="center"><b> Groups </b></div>  </th>
+      <td mat-cell class="mouse-over-cursor" (click)="selectedGroup(element)" *matCellDef="let element">
+          <div fxLayoutAlign="center">
+            {{element.name}} 
+          </div>
+         </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table >
+</div>
+<br>

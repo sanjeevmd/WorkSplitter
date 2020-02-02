@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body { height: 100%; background-color: whitesmoke; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+* {
+    box-sizing: border-box;
+  }
+  .mat-toolbar.mat-primary {
+    background: #4560c3;
+  }
+  ._user{
+    float: right;
+    padding: 9px 20px;
+    font-size: 14px;
+  }
+  .mouse-over-cursor{
+  cursor: pointer;
+  }
+
+  mat-sidenav-container {
+    height: 89%;
+  }
+
+  mat-sidenav,  mat-sidenav-content{
+      padding: 16px;
+  }
+
+  mat-sidenav{
+    background-color: lightskyblue;
+    width: 200px;
+  }
+  
+  .mat-row:nth-child(even){
+    background-color: whitesmoke;
+    }
+
+  .mat-row:nth-child(odd){
+    background-color:whitesmoke;
+    }
+
+    .mat-row:hover {
+      background-color: lightskyblue;
+    }

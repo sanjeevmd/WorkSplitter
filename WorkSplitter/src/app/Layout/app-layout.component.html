@@ -1,0 +1,25 @@
+<mat-toolbar color="primary" class="example-toolbar" fxLayout = "row" fxLayout.xs="column">
+  <div fxFlex="16%">
+    <button mat-icon-button (click)="opened = !opened" ><mat-icon>menu</mat-icon></button>
+  </div> 
+  <div fxFlex="71%">
+    <h1 fxLayoutAlign="center center" class="example-app-name" >Work Splitter</h1>
+  </div>
+  <div  fxFlex = "4%"> 
+    <img style="height: 8vh;border-radius: 60%" fxLayoutAlign="center" [src]="returnPath()">
+  </div>
+  <div fxFlex = "10%">
+    <div fxLayoutAlign="center" class="_user">{{username}}</div>
+  </div>
+  <div fxFlex = "2%">
+    <fa fxLayoutAlign="center" (click)="logout()" name="power-off" class="fa-lg mouse-over-cursor"> </fa>
+  </div>
+</mat-toolbar>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="push" [(opened)]="opened" role="navigation">
+      <mat-nav-list>
+        <a mat-list-item (click)="getURL(this.nav)" *ngFor="let nav of Nav">{{nav.displayName}}</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <router-outlet></router-outlet>  
+</mat-sidenav-container>
